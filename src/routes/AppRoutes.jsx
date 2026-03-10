@@ -8,6 +8,9 @@ import ProtectedRoute from "../components/ProtectedRoute";
 import SalesContact from "../pages/masters/SalesContact";
 import Customer from "../pages/masters/Customer";
 import Buyer from "../pages/masters/Buyer";
+import Country from "../pages/masters/Country";
+import CountryType from "../pages/masters/CountryType";
+import Product from "../pages/masters/Product";
 
 export default function AppRoutes() {
   return (
@@ -44,27 +47,52 @@ export default function AppRoutes() {
         <Route
           path="/masters/salescontact"
           element={
-          <ProtectedRoute>
-           <SalesContact />
-          </ProtectedRoute>
-         }
+            <ProtectedRoute>
+              <SalesContact />
+            </ProtectedRoute>
+          }
         />
         <Route
           path="/masters/customer"
           element={
-          <ProtectedRoute>
-           <Customer />
-          </ProtectedRoute>
-         }
+            <ProtectedRoute>
+              <Customer />
+            </ProtectedRoute>
+          }
         />
         <Route
           path="/masters/buyer"
           element={
-          <ProtectedRoute>
-            <Buyer />
-          </ProtectedRoute>
+            <ProtectedRoute>
+              <Buyer />
+            </ProtectedRoute>
           }
-         />
+        />
+        <Route
+          path="/masters/country"
+          element={
+            <ProtectedRoute>
+              <Country />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/masters/countrytype"
+          element={
+            <ProtectedRoute>
+              <CountryType />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/masters/product"
+          element={
+            <ProtectedRoute>
+              <Product />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

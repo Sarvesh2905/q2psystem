@@ -1,11 +1,13 @@
 import { Navigate } from "react-router-dom";
 
 export default function ProtectedRoute({ children }) {
-  const token = localStorage.getItem("token");
 
-  if (!token) {
-    return <Navigate to="/" />;
-  }
+const user = JSON.parse(localStorage.getItem("user"));
 
-  return children;
+if(!user){
+return <Navigate to="/" />;
+}
+
+return children;
+
 }

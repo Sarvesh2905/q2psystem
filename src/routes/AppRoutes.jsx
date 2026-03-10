@@ -11,6 +11,15 @@ import Buyer from "../pages/masters/Buyer";
 import Country from "../pages/masters/Country";
 import CountryType from "../pages/masters/CountryType";
 import Product from "../pages/masters/Product";
+import EndIndustry from "../pages/masters/EndIndustry";
+import TimelineTarget from "../pages/masters/TimelineTarget";
+import Discount from "../pages/masters/Discount";
+import SpecialDiscount from "../pages/masters/SpecialDiscount";
+import CostPrice from "../pages/masters/CostPrice";
+import Price from "../pages/masters/Price";
+import GeReference from "../pages/masters/GeReference";
+
+
 
 export default function AppRoutes() {
   return (
@@ -93,6 +102,62 @@ export default function AppRoutes() {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/masters/endindustry"
+          element={
+            <ProtectedRoute>
+             <EndIndustry/>
+            </ProtectedRoute>
+          }
+         />
+         <Route
+          path="/masters/timeline"
+           element={
+           <ProtectedRoute>
+           <TimelineTarget/>
+           </ProtectedRoute>
+           }
+          />
+          <Route
+           path="/masters/discount"
+           element={
+            <ProtectedRoute>
+              <Discount/>
+            </ProtectedRoute>
+            }
+           />
+           <Route
+             path="/masters/specialdiscount"
+             element={
+             <ProtectedRoute>
+            <SpecialDiscount/>
+            </ProtectedRoute>
+            }
+          />
+          <Route
+           path="/masters/costprice"
+           element={
+           <ProtectedRoute>
+           <CostPrice/>
+           </ProtectedRoute>
+           }
+         />
+         <Route
+           path="/masters/price"
+           element={
+          <ProtectedRoute>
+           <Price/>
+          </ProtectedRoute>
+           }
+          />
+          <Route
+           path="/masters/gereference"
+            element={
+           <ProtectedRoute>
+           <GeReference/>
+           </ProtectedRoute>
+           }
+          />
       </Routes>
     </BrowserRouter>
   );

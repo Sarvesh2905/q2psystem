@@ -18,8 +18,12 @@ import SpecialDiscount from "../pages/masters/SpecialDiscount";
 import CostPrice from "../pages/masters/CostPrice";
 import Price from "../pages/masters/Price";
 import GeReference from "../pages/masters/GeReference";
-
-
+import Currency from "../pages/masters/Currency";
+import Unit from "../pages/masters/Unit";
+import PaymentTerms from "../pages/masters/PaymentTerms";
+import DeliveryTerms from "../pages/masters/DeliveryTerms";
+import Reason from "../pages/masters/Reason";
+import Status from "../pages/masters/Status";
 
 export default function AppRoutes() {
   return (
@@ -106,58 +110,106 @@ export default function AppRoutes() {
           path="/masters/endindustry"
           element={
             <ProtectedRoute>
-             <EndIndustry/>
+              <EndIndustry />
             </ProtectedRoute>
           }
-         />
-         <Route
+        />
+        <Route
           path="/masters/timeline"
-           element={
-           <ProtectedRoute>
-           <TimelineTarget/>
-           </ProtectedRoute>
-           }
-          />
-          <Route
-           path="/masters/discount"
-           element={
+          element={
             <ProtectedRoute>
-              <Discount/>
+              <TimelineTarget />
             </ProtectedRoute>
-            }
-           />
-           <Route
-             path="/masters/specialdiscount"
-             element={
-             <ProtectedRoute>
-            <SpecialDiscount/>
+          }
+        />
+        <Route
+          path="/masters/discount"
+          element={
+            <ProtectedRoute>
+              <Discount />
             </ProtectedRoute>
-            }
-          />
-          <Route
-           path="/masters/costprice"
-           element={
-           <ProtectedRoute>
-           <CostPrice/>
-           </ProtectedRoute>
-           }
-         />
-         <Route
-           path="/masters/price"
-           element={
-          <ProtectedRoute>
-           <Price/>
-          </ProtectedRoute>
-           }
-          />
-          <Route
-           path="/masters/gereference"
-            element={
-           <ProtectedRoute>
-           <GeReference/>
-           </ProtectedRoute>
-           }
-          />
+          }
+        />
+        <Route
+          path="/masters/specialdiscount"
+          element={
+            <ProtectedRoute>
+              <SpecialDiscount />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/masters/costprice"
+          element={
+            <ProtectedRoute>
+              <CostPrice />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/masters/price"
+          element={
+            <ProtectedRoute>
+              <Price />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/masters/gereference"
+          element={
+            <ProtectedRoute>
+              <GeReference />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/masters/currency"
+          element={
+            <ProtectedRoute>
+              <Currency />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/masters/unit"
+          element={
+            <ProtectedRoute>
+              <Unit />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/masters/paymentterms"
+          element={
+            <ProtectedRoute>
+              <PaymentTerms />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/masters/deliveryterms"
+          element={
+            <ProtectedRoute>
+              <DeliveryTerms />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/masters/reason"
+          element={
+            <ProtectedRoute>
+              <Reason />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/masters/status"
+          element={
+            <ProtectedRoute>
+              <Status />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
